@@ -1,0 +1,12 @@
+# build directory
+build/*
+__pycache__/*
+*.csv
+*.cel
+*.xls
+*.xlsx
+
+# generic files to ignore
+*~
+*.swp
+*.out
