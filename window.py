@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'window.ui'
 #
-# Created: Mon May 19 11:09:29 2014
+# Created: Mon May 19 13:05:35 2014
 #      by: PyQt4 UI code generator 4.9.6
 #
 # WARNING! All changes made in this file will be lost!
@@ -77,6 +77,12 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.actionAbout = QtGui.QAction(MainWindow)
         self.actionAbout.setObjectName(_fromUtf8("actionAbout"))
+        self.actionCellDatabaseFileFormat = QtGui.QAction(MainWindow)
+        self.actionCellDatabaseFileFormat.setObjectName(_fromUtf8("actionCellDatabaseFileFormat"))
+        self.actionNeighborFileFormat = QtGui.QAction(MainWindow)
+        self.actionNeighborFileFormat.setObjectName(_fromUtf8("actionNeighborFileFormat"))
+        self.mnuAbout.addAction(self.actionCellDatabaseFileFormat)
+        self.mnuAbout.addAction(self.actionNeighborFileFormat)
         self.mnuAbout.addAction(self.actionAbout)
         self.menubar.addAction(self.mnuAbout.menuAction())
 
@@ -98,4 +104,6 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", "Developed by Imtiaz A. Nizami", None))
         self.mnuAbout.setTitle(_translate("MainWindow", "&File", None))
         self.actionAbout.setText(_translate("MainWindow", "About", None))
+        self.actionCellDatabaseFileFormat.setText(_translate("MainWindow", "CellDatabaseFileFormat", None))
+        self.actionNeighborFileFormat.setText(_translate("MainWindow", "NeighborFileFormat", None))
 

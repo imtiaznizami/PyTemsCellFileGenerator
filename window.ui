@@ -152,6 +152,8 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
+    <addaction name="actionCellDatabaseFileFormat"/>
+    <addaction name="actionNeighborFileFormat"/>
     <addaction name="actionAbout"/>
    </widget>
    <addaction name="mnuAbout"/>
@@ -160,6 +162,16 @@
   <action name="actionAbout">
    <property name="text">
     <string>About</string>
+   </property>
+  </action>
+  <action name="actionCellDatabaseFileFormat">
+   <property name="text">
+    <string>CellDatabaseFileFormat</string>
+   </property>
+  </action>
+  <action name="actionNeighborFileFormat">
+   <property name="text">
+    <string>NeighborFileFormat</string>
    </property>
   </action>
  </widget>

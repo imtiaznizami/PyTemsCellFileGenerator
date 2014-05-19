@@ -19,9 +19,9 @@ ABC1013,12343,24.30089209,67.53721882,240,40,71,11,410,6,235
 .
 .
 
-1. Neighbor File format:
+2. Neighbor File format:
 
-cell,nbr
+cell,neighbor
 12341,23451
 12341,34562
 12341,45673
@@ -46,6 +46,8 @@ class Main(QtGui.QMainWindow):
         self.ui.btnInputCellFile.clicked.connect(self.btnInputCellFile_Clicked)
         self.ui.btnInputNeighborFile.clicked.connect(self.btnInputNeighborFile_Clicked)
         self.ui.btnGenerateCellFile.clicked.connect(self.btnGenerateCellFile_Clicked)
+        self.ui.actionCellDatabaseFileFormat.triggered.connect(self.actionCellDatabaseFileFormat_Clicked)
+        self.ui.actionNeighborFileFormat.triggered.connect(self.actionNeighborFileFormat_Clicked)
         self.ui.actionAbout.triggered.connect(self.actionAbout_Clicked)
         
     def btnInputCellFile_Clicked(self):
@@ -53,9 +55,15 @@ class Main(QtGui.QMainWindow):
               
     def btnInputNeighborFile_Clicked(self):
         self.ui.txtInputNeighborFile.setText(QtGui.QFileDialog.getOpenFileName(filter='CSV (*.csv);;All files (*.*)'))
-    
+            
+    def actionCellDatabaseFileFormat_Clicked(self):
+        QtGui.QMessageBox.information(None, 'Cell Database file Format', "CELL,CI,LAT,LON,ANT_DIRECTION,ANT_BEAM_WIDTH,ARFCN,BSIC,MCC,MNC,LAC")
+        
+    def actionNeighborFileFormat_Clicked(self):
+        QtGui.QMessageBox.information(None, 'Neighbor file Format', "cell,neighbor")
+        
     def actionAbout_Clicked(self):
-        QtGui.QMessageBox.information(None, 'About', "Source code for this software can be found at:\n Coming soon")
+        QtGui.QMessageBox.information(None, 'About', "Source code for this software can be found at:\nhttps://github.com/imtiaznizami/PyTemsCellFileGenerator")
         
     def btnGenerateCellFile_Clicked(self):
         fn_cel = self.ui.txtInputCellFile.text()
