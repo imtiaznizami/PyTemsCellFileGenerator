@@ -94,7 +94,7 @@ class Main(QtGui.QMainWindow):
         
         # read cell file and write to file like string
         output = io.StringIO()
-        writer = csv.writer(output, quoting=csv.QUOTE_NONNUMERIC, lineterminator='\n')
+        writer = csv.writer(output, delimiter = '\t', lineterminator='\n')
         writer.writerow(["2 TEMS_-_Cell_names"])
         lst_header = []
         flag = 1
